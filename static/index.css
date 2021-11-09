@@ -1,0 +1,4 @@
+body { margin: 16px; }
+ul>li { list-style-type: none; }
+.btn { margin-bottom: 3px; }
+.btn-lg { font-size: 3em; font-weight: bold; }

@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+
+import sys, json
+
+fin = open(sys.argv[1], "r")
+wiki = json.load(fin)
+fin.close()
+
+paths = list()
+for src, dsts in wiki.items():
+  for dst in dsts:
+    path = "\"{0}\" -> \"{1}\"".format(src, dst)
+    paths.append(path)
+print("digraph D {{\n{0}\n}}".format("\n".join(paths)))
+

@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  wikimap:
+    build: .
+    hostname: wikimap
+    container_name: wikimap
+    ports:
+      - 5000:5000
+    volumes:
+      - .:/WikiMap
+      - /tmp:/tmp
